@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <base href="/">
-    <title>Invictus</title>
+    <title>selftracking</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
@@ -18,6 +18,16 @@
     <script src="js/core.js"></script>
   </head>
   <body ng-app="selftracking" ng-controller="mainController">
-    
+    <div class="container">
+      <h2>Last Activity</h2>
+      Activity minutes : {{lastactivity.activitymin}} min<br>
+      Steps : {{lastactivity.steps}}<br>
+      Calories : {{lastactivity.calories}}<br>
+      Distance today : {{lastactivity.distance}} km<br>
+
+      <br>
+      <p>In DB : </p>
+      {{lastactivity}}
+    </div>
   </body>
 </html>
