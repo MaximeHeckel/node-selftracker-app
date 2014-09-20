@@ -25,8 +25,12 @@
       Calories : {{lastactivity.calories}}<br>
       Distance today : {{lastactivity.distance}} km<br>
       <br>
-      <p>In DB : </p>
-      {{lastactivity}}
+      <h2>Last Run</h2>
+      Distance : {{lastrun.distance/1000 | number: 3}} km <br>
+      Average speed : {{(lastrun.distance/lastrun.duration)*3.6 | number: 2}} km/h<br>
+      Climb : {{lastrun.climb}} m<br>
+      Date : {{lastrun.date | date: 'medium'}}<br>
+      <br>
     </div>
   </body>
 </html>

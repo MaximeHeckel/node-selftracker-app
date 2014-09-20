@@ -10,4 +10,13 @@ function mainController($scope, $http){
     .error(function(data){
       console.log('Error: '+ data);
     });
+
+  $http.get('/api/lastrun')
+    .success(function(data){
+      $scope.lastrun = data;
+      $scope.path = data.path;
+    })
+    .error(function(data){
+      console.log('Error: ' + data);
+    });
 }
