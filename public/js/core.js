@@ -1,4 +1,4 @@
-var selftracking = angular.module('selftracking',[]);
+var selftracking = angular.module('selftracking',["leaflet-directive"]);
 
 function mainController($scope, $http){
 
@@ -19,4 +19,12 @@ function mainController($scope, $http){
     .error(function(data){
       console.log('Error: ' + data);
     });
+
+    angular.extend($scope, {
+                london: {
+                    lat: 51.505,
+                    lng: -0.09,
+                    zoom: 4
+                }
+            });
 }

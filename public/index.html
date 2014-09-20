@@ -12,6 +12,7 @@
 
     <!--JS-->
     <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
 
     <!--Custom angular files-->
@@ -29,7 +30,9 @@
       Distance : {{lastrun.distance/1000 | number: 3}} km <br>
       Average speed : {{(lastrun.distance/lastrun.duration)*3.6 | number: 2}} km/h<br>
       Climb : {{lastrun.climb}} m<br>
+      Calories : {{lastrun.calories}}<br>
       Date : {{lastrun.date | date: 'medium'}}<br>
+      <leaflet center="london" width="640" height="400"></leaflet>
       <br>
     </div>
   </body>

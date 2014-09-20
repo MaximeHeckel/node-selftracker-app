@@ -8,6 +8,7 @@
 		"angular": "latest",
 		"angular-route": "latest",
 		"angular-leaflet-directive": "latest",
+		"leaflet": "latest",
 		"chartjs": "latest"
 	}
 }
