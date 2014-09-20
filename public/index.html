@@ -35,9 +35,10 @@
         Climb : {{lastrun.climb}} m<br>
         Calories : {{lastrun.calories}}<br>
         Date : {{lastrun.date | date: 'medium'}}<br>
+        {{path[1].latitude}} & {{path[1].longitude}}<br>
       </div>
       <div class=map ng-controller="mapController">
-        <leaflet center="london" paths="path" width="640" height="400"></leaflet>
+        <leaflet center="run" paths="path" width="640" height="400"></leaflet>
       </div>
       <br>
     </div>

@@ -1,4 +1,17 @@
-var selftracking = angular.module('selftracking',["leaflet-directive"]);
+var selftracking = angular.module('selftracking',["leaflet-directive"])
+  .service('positionService', function($http){
+    return {
+      getPos : function(){
+        $http.get('/api/lastrun')
+          .success(function(data){
+            for(var i = 0; i<data.path.length; i++){
+              console.log(data.path[1].latitude)
+              return data.path[1].latitude;
+            }
+          });
+      }
+    }
+  });
 
 function mainController($scope, $http){
 
@@ -14,15 +27,16 @@ function mainController($scope, $http){
   $http.get('/api/lastrun')
     .success(function(data){
       $scope.lastrun = data;
+      $scope.path = data.path;
     })
     .error(function(data){
       console.log('Error: ' + data);
     });
 }
 
-function mapController($scope,$http){
+function mapController($scope, positionService){
   angular.extend($scope, {
-              london: {
+              run: {
                   lat: 51.505,
                   lng: -0.09,
                   zoom: 4
@@ -34,15 +48,7 @@ function mapController($scope,$http){
                       latlngs: [
                           { lat: 51.50, lng: -0.082 },
                           { lat: 48.83, lng: 2.37 },
-                          { lat: 41.91, lng: 12.48 }
-                      ]
-                  },
-                  p2: {
-                      color: 'green',
-                      weight: 8,
-                      latlngs: [
-                          { lat: 48.2083537, lng: 16.3725042 },
-                          { lat: 48.8534, lng: 2.3485 }
+                          { lat: positionService.getPos(), lng: 7.723812 }
                       ]
                   }
                 }
