@@ -39,18 +39,19 @@ function mapController($scope, positionService){
                 tileLayer : 'http://{s}.tiles.mapbox.com/v3/sarasafavi.hjegnofh/{z}/{x}/{y}.png',
                 scrollWheelZoom: false,
                 zoomControl : false,
+                doubleClickZoom : false,
                 dragging : false,
                 keyboard : false,
                 attributionControl : false
               },
               run: {
                   lat : 48.58,
-                  lng : 7.75,
+                  lng : 7.737,
                   zoom: 13
               },
               path: {
                   p1: {
-                      color: '#8AAEFF',
+                      color: 'blue',
                       weight: 4,
                       zoom : 8,
                       latlngs: positionService.getPos()
