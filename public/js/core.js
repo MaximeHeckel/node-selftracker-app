@@ -36,7 +36,7 @@ function mainController($scope, $http){
 function mapController($scope, positionService){
   angular.extend($scope, {
               defaults: {
-                //tileLayer :,
+                tileLayer : 'http://{s}.tiles.mapbox.com/v3/sarasafavi.hjegnofh/{z}/{x}/{y}.png',
                 scrollWheelZoom: false,
                 zoomControl : false,
                 dragging : false,
