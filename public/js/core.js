@@ -10,8 +10,8 @@ var selftracking = angular.module('selftracking',["leaflet-directive"])
      });
      return {
        getPos : function() {
-          return lastrunpos;
-       }
+        return lastrunpos;
+      }
      }
   });
 
@@ -35,15 +35,24 @@ function mainController($scope, $http){
 
 function mapController($scope, positionService){
   angular.extend($scope, {
+              defaults: {
+                //tileLayer :,
+                scrollWheelZoom: false,
+                zoomControl : false,
+                dragging : false,
+                keyboard : false,
+                attributionControl : false
+              },
               run: {
-                  lat: 51.505,
-                  lng: -0.09,
-                  zoom: 4
+                  lat : 48.58,
+                  lng : 7.75,
+                  zoom: 13
               },
               path: {
                   p1: {
-                      color: 'red',
-                      weight: 8,
+                      color: '#8AAEFF',
+                      weight: 4,
+                      zoom : 8,
                       latlngs: positionService.getPos()
                   }
                 }
