@@ -18,7 +18,7 @@ body{
   border-radius: 50%;
   position: absolute;
   top: 60px;
-  left: 250px;
+  left: 32%;
 }
 
 .ring.zero{
@@ -29,7 +29,7 @@ body{
   position: relative;
   margin: 0 auto;
   -webkit-animation-name: rotateEndlessly;
-  -webkit-animation-duration: 12s;
+  -webkit-animation-duration: 70s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
 }
