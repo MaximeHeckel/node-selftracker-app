@@ -8,8 +8,8 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--JS-->
     <script src="libs/angular/angular.min.js"></script>
@@ -22,7 +22,7 @@
   </head>
   <body ng-app="selftracking">
     <div class="container">
-      <div class="stats" ng-controller="mainController">
+      <!--<div class="stats" ng-controller="mainController">
         <h2>Last Activity</h2>
         Activity minutes : {{lastactivity.activitymin}} min<br>
         Steps : {{lastactivity.steps}}<br>
@@ -35,9 +35,13 @@
         Climb : {{lastrun.climb}} m<br>
         Calories : {{lastrun.calories}}<br>
         Date : {{lastrun.date | date: 'medium'}}<br>
-      </div>
-      <div class=map ng-controller="mapController">
-        <a href="/"><leaflet defaults="defaults" center="run" paths="path" width ="400" height="400" style="opacity: 0.99; border-radius: 50%"></leaflet></a>
+      </div>-->
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+        <div class="map" ng-controller="mapController">
+          <div class="ring zero"></div>
+          <a href="/"><leaflet defaults="defaults" center="run" paths="path" width="280" height="280" class="custom-map"></leaflet></a>
+        </div>
       </div>
       <br>
     </div>

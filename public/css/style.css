@@ -1,0 +1,49 @@
+body{
+  background-color:#0D1218;
+}
+
+.centered{
+  text-align: center;
+}
+
+.leaflet-container{
+  background-color: #0C1217;
+}
+
+.map{
+}
+
+.custom-map{
+  opacity: 0.99;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 250px;
+}
+
+.ring.zero{
+  background-image:url("../img/0.png");
+  background-position: center;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotateEndlessly
+{
+    from
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to
+    {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

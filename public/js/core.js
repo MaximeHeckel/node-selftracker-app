@@ -56,8 +56,8 @@ function mapController($scope, positionService){
                 attributionControl : false
               },
               run: {
-                  lat : 48.582,
-                  lng : 7.74,
+                  lat : 48.585,
+                  lng : 7.75,
                   zoom: 13
               },
               path: {
