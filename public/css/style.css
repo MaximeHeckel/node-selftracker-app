@@ -11,27 +11,43 @@ body{
 }
 
 .map{
+  padding-top: 100px;
+}
+
+.one{
+  background-image:url("../img/1.png");
+  background-position: center;
+  height: 502px;
+  width: 502px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.two{
+  background-image:url("../img/2.png");
+  height: 414px;
+  width: 414px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -207px 0px 0px -207px;
+  -webkit-animation-name: rotateEndlesslyInvert;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
 
 .custom-map{
   opacity: 0.99;
   border-radius: 50%;
   position: absolute;
-  top: 60px;
-  left: 32%;
-}
-
-.ring.zero{
-  background-image:url("../img/0.png");
-  background-position: center;
-  height: 400px;
-  width: 400px;
-  position: relative;
-  margin: 0 auto;
-  -webkit-animation-name: rotateEndlessly;
-  -webkit-animation-duration: 70s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0px 0px -200px;
 }
 
 @-webkit-keyframes rotateEndlessly
@@ -45,5 +61,33 @@ body{
     {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotateEndlesslyInvert
+{
+    from
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to
+    {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes rotateEndlesslyCancel
+{
+    from
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to
+    {
+        -webkit-transform: rotate(-0deg);
+        transform: rotate(-0deg);
     }
 }
