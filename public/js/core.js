@@ -1,4 +1,4 @@
-var selftracking = angular.module('selftracking',["leaflet-directive"])
+var selftracking = angular.module('selftracking',["leaflet-directive","angularMoment","ui.odometer"])
 
   selftracking.service('positionService', function($http){
     var lastrunpos = [];

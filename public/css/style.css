@@ -1,3 +1,7 @@
+html{
+    height: 800px;
+}
+
 body{
   background-color:#0D1218;
 }
@@ -6,19 +10,37 @@ body{
   text-align: center;
 }
 
+.runcard{
+  color: #ffffff
+}
+
+.info{
+  opacity: 1;
+  left:50%;
+  top: 55%;
+  position: absolute;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.run-info:{
+    font-weight: 300;
+}
+
 .leaflet-container{
   background-color: #0C1217;
 }
 
 .map{
-  padding-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 
 .one{
   background-image:url("../img/1.png");
   background-position: center;
-  height: 502px;
-  width: 502px;
+  height: 504px;
+  width: 504px;
   position: relative;
   margin: 0 auto;
   animation-name: rotateEndlessly;
@@ -79,9 +101,32 @@ body{
   -moz-animation-timing-function: linear;
 }
 
-.custom-map{
-  opacity: 0.99;
+.four{
+  background-image:url("../img/4.png");
+  height: 486px;
+  width: 486px;
   position: absolute;
+  top:50%;
+  left:50%;
+  margin: -243px 0px 0px -243px;
+  animation-name: rotateEndlessly;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlesslyInvert;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlesslyInvert;
+  -moz-animation-duration: 7s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.custom-map {
+  opacity: 0.6;
+  position: absolute;
+  z-index: -1;
   top: 50%;
   left: 50%;
   margin: -200px 0px 0px -200px;
@@ -164,4 +209,4 @@ body{
         -moz-transform: rotate(-360deg);
         transform: rotate(-360deg);
     }
-}
+)

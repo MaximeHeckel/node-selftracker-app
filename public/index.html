@@ -11,12 +11,17 @@
     <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="libs/odometer/themes/odometer-theme-minimal.css">
 
     <!--JS-->
     <script src="libs/angular/angular.min.js"></script>
     <script src="libs/leaflet/dist/leaflet.js"></script>
     <script src="libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    <script src="libs/moment/moment.js"></script>
+    <script src="libs/angular-moment/angular-moment.min.js"></script>
     <script src="libs/wow/dist/wow.min.js"></script>
+    <script src="libs/odometer/odometer.js"></script>
+    <script src="libs/angular-odometer-js/dist/angular-odometer.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
 
     <!--Custom angular files-->
@@ -39,11 +44,23 @@
         Date : {{lastrun.date | date: 'medium'}}<br>
       </div>-->
       <div class="row">
+        <div class="info" ng-controller="mainController">
+            <div class="runcard">
+              <p class="run-info">
+                <span odometer="lastrun.distance/1000 | number: 3" odometer-options="{duration:4000}"></span> km in {{lastrun.duration/60 | number: 1}} min</p>
+              <p>
+                <span odometer="lastrun.calories"></span> calories burned</p>
+              <p>
+                <span am-time-ago="lastrun.date"></span>
+              </p>
+            </div>
+        </div>
         <div class="col-lg-8 col-lg-offset-2 centered">
         <div class="map wow zoomIn animated" ng-controller="mapController">
           <div class="one">
             <div class="two"></div>
             <div class="three"></div>
+            <div class="four"></div>
             <leaflet defaults="defaults" center="run" paths="path" width="400" height="400" class="custom-map"></leaflet>
           </div>
         </div>
