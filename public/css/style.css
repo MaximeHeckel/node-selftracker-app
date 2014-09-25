@@ -21,10 +21,18 @@ body{
   width: 502px;
   position: relative;
   margin: 0 auto;
+  animation-name: rotateEndlessly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   -webkit-animation-name: rotateEndlessly;
   -webkit-animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
 }
 
 .two{
@@ -35,23 +43,71 @@ body{
   top:50%;
   left:50%;
   margin: -207px 0px 0px -207px;
+  animation-name: rotateEndlesslyInvert;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   -webkit-animation-name: rotateEndlesslyInvert;
   -webkit-animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlesslyInvert;
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.three{
+  background-image:url("../img/3.png");
+  height: 461px;
+  width: 461px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -230px 0px 0px -232px;
+  animation-name: rotateEndlesslyInvert;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlesslyInvert;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlesslyInvert;
+  -moz-animation-duration: 7s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
 }
 
 .custom-map{
   opacity: 0.99;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -200px 0px 0px -200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    animation-name: rotateEndlesslyInvert;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   -webkit-animation-name: rotateEndlesslyInvert;
   -webkit-animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlesslyInvert;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.custom-map svg{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
 }
 
 @-webkit-keyframes rotateEndlessly
@@ -82,16 +138,30 @@ body{
     }
 }
 
-@-webkit-keyframes rotateEndlesslyCancel
+@-moz-keyframes rotateEndlessly
 {
     from
     {
-        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
         transform: rotate(0deg);
     }
     to
     {
-        -webkit-transform: rotate(-0deg);
-        transform: rotate(-0deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotateEndlesslyInvert
+{
+    from
+    {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to
+    {
+        -moz-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
 }
