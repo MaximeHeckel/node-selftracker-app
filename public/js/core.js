@@ -1,4 +1,4 @@
-var selftracking = angular.module('selftracking',["leaflet-directive","angularMoment","ui.odometer"])
+var selftracking = angular.module('selftracking',["leaflet-directive","angularMoment","ui.odometer","angular.directives-round-progress"])
 
   selftracking.service('positionService', function($http){
     var lastrunpos = [];
@@ -31,6 +31,14 @@ function mainController($scope, $http){
   $http.get('/api/lastactivity')
     .success(function(data){
       $scope.lastactivity = data;
+      $scope.steps = {
+          label: $scope.lastactivity.steps + " steps today",
+          percentage: $scope.lastactivity.steps/10000
+      };
+      $scope.calories = {
+          label: $scope.lastactivity.calories + " calories today",
+          percentage: $scope.lastactivity.calories/2184
+        };
     })
     .error(function(data){
       console.log('Error: '+ data);

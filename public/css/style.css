@@ -6,25 +6,84 @@ body{
   background-color:#0D1218;
 }
 
+a:hover{
+  text-decoration:none;
+}
+
+.logo{
+  color: #ffffff;
+  padding-top : 50px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.subtitle{
+  font-size:13px;
+}
+
+.mainStats{
+  position:absolute;
+  z-index: 2;
+  margin-top: 150px;
+  margin-left: 40px;
+}
+
+.calStats{
+  position: absolute;
+  z-index: 2;
+  margin-top: 400px;
+  margin-left: 40px;
+}
+
+@media screen and (max-width:1200px){
+  .mainStats{
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+  .calStats{
+    margin-top: 300px;
+    margin-left: 0;
+  }
+}
+
 .centered{
   text-align: center;
 }
 
 .runcard{
-  color: #ffffff
+  color : #ffffff;
 }
 
 .info{
   opacity: 1;
   left:50%;
-  top: 55%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 9% 0px 0px -100px;
   position: absolute;
-  opacity: 0.8;
+  text-align: center;
   z-index: 1;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1400px){
+  .info{
+    margin: 6% 0px 0px -100px;
+  }
 }
 
 .run-info:{
     font-weight: 300;
+}
+
+.odometer{
+  font-family: 'Abel', sans-serif;
 }
 
 .leaflet-container{
@@ -32,8 +91,8 @@ body{
 }
 
 .map{
-  padding-top: 80px;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .one{
@@ -81,12 +140,12 @@ body{
 
 .three{
   background-image:url("../img/3.png");
-  height: 461px;
-  width: 461px;
+  height: 460px;
+  width: 460px;
   position: absolute;
   top:50%;
   left:50%;
-  margin: -230px 0px 0px -232px;
+  margin: -230px 0px 0px -230px;
   animation-name: rotateEndlesslyInvert;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -109,8 +168,8 @@ body{
   top:50%;
   left:50%;
   margin: -243px 0px 0px -243px;
-  animation-name: rotateEndlessly;
-  animation-duration: 15s;
+  animation-name: rotateEndlesslyInvert;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   -webkit-animation-name: rotateEndlesslyInvert;
@@ -123,8 +182,42 @@ body{
   -moz-animation-timing-function: linear;
 }
 
+.five{
+  background-image:url("../img/5.png");
+  height: 432px;
+  width: 432px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -216px 0px 0px -216px;
+  animation-name: rotateEndlessly;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.background-circle{
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -200px 0px 0px -200px;
+  background-color: #0D1218;
+  opacity: 0.4;
+}
+
 .custom-map {
-  opacity: 0.6;
+  opacity: 0.99;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -148,11 +241,56 @@ body{
   -moz-animation-timing-function: linear;
 }
 
-.custom-map svg{
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -khtml-border-radius: 50%;
+.spinner {
+  width: 75px;
+  height: 45px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #ffffff;
+  height: 100%;
+  width: 1px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.6) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.6);
+    -webkit-transform: scaleY(0.6);
+  } 20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }
 
 @-webkit-keyframes rotateEndlessly
@@ -210,3 +348,56 @@ body{
         transform: rotate(-360deg);
     }
 )
+path{
+  z-index:1;
+}
+.custom-map{
+  opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+@-webkit-keyframes fadeIn
+{
+  from
+  {
+    opacity:0;
+  }
+  to
+  {
+    opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn
+{
+  from
+  {
+    opacity:0;
+  }
+  to
+  {
+    opacity:1;
+  }
+}
+
+@keyframes fadeIn
+{
+  from
+  {
+    opacity:0;
+  }
+  to
+  {
+    opacity:1;
+  }
+}

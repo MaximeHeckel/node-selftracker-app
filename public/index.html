@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libs/odometer/themes/odometer-theme-minimal.css">
 
     <!--JS-->
@@ -22,6 +24,7 @@
     <script src="libs/wow/dist/wow.min.js"></script>
     <script src="libs/odometer/odometer.js"></script>
     <script src="libs/angular-odometer-js/dist/angular-odometer.min.js"></script>
+    <script src="libs/angular-round-progress-directive/angular-round-progress-directive.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
 
     <!--Custom angular files-->
@@ -29,6 +32,13 @@
   </head>
   <body ng-app="selftracking">
     <div class="container">
+      <div class="logo wow fadeIn animated">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+          Maxime's personnal tracker
+          <hr>
+          <p class="subtitle">Inspired by <a href="http://aprilzero.com/">APRILZERO</a>, Powered with Runkeeper and Fitbit</p>
+        </div>
+      </div>
       <!--<div class="stats" ng-controller="mainController">
         <h2>Last Activity</h2>
         Activity minutes : {{lastactivity.activitymin}} min<br>
@@ -43,13 +53,21 @@
         Calories : {{lastrun.calories}}<br>
         Date : {{lastrun.date | date: 'medium'}}<br>
       </div>-->
-      <div class="row">
-        <div class="info" ng-controller="mainController">
+      <div class="row" ng-controller="mainController">
+        <div class="mainStats wow zoomIn animated">
+          <div class="radial1" ang:round:progress data-round-progress-model="steps"></div>
+        </div>
+        <div class="calStats wow zoomIn animated" data-wow-delay="3s">
+          <div class="radial2" ang:round:progress data-round-progress-model="calories"></div>
+        </div>
+        <div class="info">
             <div class="runcard">
               <p class="run-info">
-                <span odometer="lastrun.distance/1000 | number: 3" odometer-options="{duration:4000}"></span> km in {{lastrun.duration/60 | number: 1}} min</p>
+                <p>Last run: </p>
+                <span odometer="lastrun.distance/1000 | number: 3" odometer-options="{duration:4000}"></span> KM IN <span odometer="lastrun.duration/60 | number: 1" odometer-options="{duration: 5000}"></span> MIN
+                </p>
               <p>
-                <span odometer="lastrun.calories"></span> calories burned</p>
+                <span odometer="lastrun.calories"></span> CALORIES BURNED</p>
               <p>
                 <span am-time-ago="lastrun.date"></span>
               </p>
@@ -61,11 +79,12 @@
             <div class="two"></div>
             <div class="three"></div>
             <div class="four"></div>
+            <div class="five"></div>
+            <div class="background-circle"></div>
             <leaflet defaults="defaults" center="run" paths="path" width="400" height="400" class="custom-map"></leaflet>
           </div>
         </div>
       </div>
-      <br>
     </div>
   </body>
 </html>
