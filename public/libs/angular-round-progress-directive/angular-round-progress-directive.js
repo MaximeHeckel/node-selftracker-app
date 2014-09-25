@@ -30,7 +30,7 @@ angular.module('angular.directives-round-progress', []).directive('angRoundProgr
       var outerCircleRadius = node.getAttribute('data-round-progress-outer-circle-radius') || '100';
       var innerCircleRadius = node.getAttribute('data-round-progress-inner-circle-radius') || '70';
 
-      var labelFont = node.getAttribute('data-round-progress-label-font') || '14px Abel';
+      var labelFont = node.getAttribute('data-round-progress-label-font') || '14px Open Sans';
 
       return {
         pre: function preLink(scope, instanceElement, instanceAttributes, controller) {
