@@ -74,7 +74,7 @@ a:hover{
 
 @media screen and (min-width: 1400px){
   .info{
-    margin: 500px 0px 0px -100px;
+    margin: 0px 0px 0px -100px;
   }
 }
 
