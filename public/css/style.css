@@ -64,7 +64,7 @@ a:hover{
   top: 50%;
   height: 200px;
   width: 200px;
-  margin: 9% 0px 0px -100px;
+  margin: 8% 0px 0px -100px;
   position: absolute;
   text-align: center;
   z-index: 1;
@@ -74,7 +74,7 @@ a:hover{
 
 @media screen and (min-width: 1400px){
   .info{
-    margin: 6% 0px 0px -100px;
+    margin: 500px 0px 0px -100px;
   }
 }
 

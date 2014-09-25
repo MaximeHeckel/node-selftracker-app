@@ -32,11 +32,11 @@ function mainController($scope, $http){
     .success(function(data){
       $scope.lastactivity = data;
       $scope.steps = {
-          label: $scope.lastactivity.steps + " steps today",
+          label: $scope.lastactivity.steps + "/10000 steps today",
           percentage: $scope.lastactivity.steps/10000
       };
       $scope.calories = {
-          label: $scope.lastactivity.calories + " calories today",
+          label: $scope.lastactivity.calories + "/2184 calories today",
           percentage: $scope.lastactivity.calories/2184
         };
     })
