@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "supervisor": "latest"
-  }
+  },
+  "scripts": {
+  "start": "node app.js",
+  "postinstall": "bower install"
+}
 }
