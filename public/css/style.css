@@ -136,18 +136,6 @@ a:hover{
   left:50%;
   margin: -205px 0px 0px -205px;
   z-index: -1;
-  animation-name: rotateEndlesslyInvert;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  -webkit-animation-name: rotateEndlesslyInvert;
-  -webkit-animation-duration: 20s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: rotateEndlesslyInvert;
-  -moz-animation-duration: 20s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: linear;
 }
 
 .two{
