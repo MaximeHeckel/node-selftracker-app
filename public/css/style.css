@@ -96,12 +96,12 @@ a:hover{
 }
 
 .one{
-  background-image:url("../img/1.png");
   background-position: center;
   height: 504px;
   width: 504px;
   position: relative;
   margin: 0 auto;
+  z-index: 1000;
   animation-name: rotateEndlessly;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -116,6 +116,51 @@ a:hover{
   -moz-animation-timing-function: linear;
 }
 
+.onebis{
+  background-image:url("../img/1.png");
+  background-position: center;
+  height: 504px;
+  width: 504px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  animation-name: rotateEndlessly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.back{
+  background-image:url("../img/back.png");
+  height: 410px;
+  width: 410px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -205px 0px 0px -205px;
+  z-index: -1;
+  animation-name: rotateEndlesslyInvert;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlesslyInvert;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlesslyInvert;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
 .two{
   background-image:url("../img/2.png");
   height: 414px;
@@ -124,6 +169,7 @@ a:hover{
   top:50%;
   left:50%;
   margin: -207px 0px 0px -207px;
+  z-index: 2;
   animation-name: rotateEndlesslyInvert;
   animation-duration: 15s;
   animation-iteration-count: infinite;
@@ -146,6 +192,7 @@ a:hover{
   top:50%;
   left:50%;
   margin: -230px 0px 0px -230px;
+  z-index: 2;
   animation-name: rotateEndlesslyInvert;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -168,6 +215,7 @@ a:hover{
   top:50%;
   left:50%;
   margin: -243px 0px 0px -243px;
+  z-index: 2;
   animation-name: rotateEndlesslyInvert;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -190,6 +238,7 @@ a:hover{
   top:50%;
   left:50%;
   margin: -216px 0px 0px -216px;
+  z-index: 2;
   animation-name: rotateEndlessly;
   animation-duration: 15s;
   animation-iteration-count: infinite;
@@ -219,7 +268,7 @@ a:hover{
 .custom-map {
   opacity: 0.99;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   top: 50%;
   left: 50%;
   margin: -200px 0px 0px -200px;
