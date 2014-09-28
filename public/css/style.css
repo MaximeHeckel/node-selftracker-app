@@ -135,7 +135,7 @@ a:hover{
   top:50%;
   left:50%;
   margin: -205px 0px 0px -205px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .two{
