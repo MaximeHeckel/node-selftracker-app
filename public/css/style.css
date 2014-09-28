@@ -163,23 +163,23 @@ a:hover{
 
 .three{
   background-image:url("../img/3.png");
-  height: 460px;
-  width: 460px;
+  height: 464px;
+  width: 464px;
   position: absolute;
   top:50%;
   left:50%;
-  margin: -230px 0px 0px -230px;
+  margin: -232px 0px 0px -232px;
   z-index: 2;
   animation-name: rotateEndlesslyInvert;
-  animation-duration: 7s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   -webkit-animation-name: rotateEndlesslyInvert;
-  -webkit-animation-duration: 7s;
+  -webkit-animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -moz-animation-name: rotateEndlesslyInvert;
-  -moz-animation-duration: 7s;
+  -moz-animation-duration: 15s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
 }
