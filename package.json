@@ -6,7 +6,8 @@
     "mongoose": "^3.8.15",
     "request": "^2.40.0",
     "body-parser" : "~1.4.2",
-	 "method-override" : "~2.0.2"
+	 "method-override" : "~2.0.2",
+    "bower" : "latest"
   },
   "devDependencies": {
     "supervisor": "latest"
