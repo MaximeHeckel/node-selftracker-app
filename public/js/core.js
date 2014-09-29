@@ -39,6 +39,10 @@ function mainController($scope, $http){
           label: $scope.lastactivity.calories + " / 2184  calories today",
           percentage: $scope.lastactivity.calories/2184
         };
+      $scope.dist = {
+          label: $scope.lastactivity.distance + " / 8.00 km today",
+          percentage: $scope.lastactivity.steps/8000
+        };
     })
     .error(function(data){
       console.log('Error: '+ data);

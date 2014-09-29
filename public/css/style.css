@@ -29,6 +29,7 @@ a:hover{
   z-index: 2;
   margin-top: 150px;
   margin-left: 40px;
+  left: 0
 }
 
 .calStats{
@@ -36,6 +37,15 @@ a:hover{
   z-index: 2;
   margin-top: 400px;
   margin-left: 40px;
+  left: 0
+}
+
+.distStats{
+  position: absolute;
+  z-index: 2;
+  margin-top: 150px;
+  margin-right:40px;
+  right: 0;
 }
 
 @media screen and (max-width:1200px){
