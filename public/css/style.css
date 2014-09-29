@@ -24,6 +24,16 @@ a:hover{
   font-size:13px;
 }
 
+.min-counter{
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  color: #79A5FF;
+  padding-top: 40px;
+  font-size: 13px;
+  font-family: 'Abel'
+}
+
 .mainStats{
   position:absolute;
   z-index: 2;

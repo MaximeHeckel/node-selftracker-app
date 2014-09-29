@@ -24,11 +24,14 @@
     <script src="libs/wow/dist/wow.min.js"></script>
     <script src="libs/odometer/odometer.js"></script>
     <script src="libs/angular-odometer-js/dist/angular-odometer.min.js"></script>
+    <script src="libs/angular-timer/dist/angular-timer.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
 
     <!--Custom angular files-->
     <script src="js/angular-round-progress-directive.js"></script>
     <script src="js/core.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body ng-app="selftracking">
     <div class="container">
@@ -37,21 +40,14 @@
           Maxime's personal tracker
           <hr>
           <p class="subtitle">Inspired by <a href="http://aprilzero.com/">APRILZERO</a>, Powered with Runkeeper and Fitbit</p>
+          <div class="min-counter">
+            Seconds tracked:
+            <span id="time"></span>
+          </div>
         </div>
       </div>
       <!--<div class="stats" ng-controller="mainController">
-        <h2>Last Activity</h2>
         Activity minutes : {{lastactivity.activitymin}} min<br>
-        Steps : {{lastactivity.steps}}<br>
-        Calories : {{lastactivity.calories}}<br>
-        Distance today : {{lastactivity.distance}} km<br>
-        <br>
-        <h2>Last Run</h2>
-        Distance : {{lastrun.distance/1000 | number: 3}} km <br>
-        Average speed : {{(lastrun.distance/lastrun.duration)*3.6 | number: 2}} km/h<br>
-        Climb : {{lastrun.climb}} m<br>
-        Calories : {{lastrun.calories}}<br>
-        Date : {{lastrun.date | date: 'medium'}}<br>
       </div>-->
       <div class="row" ng-controller="mainController">
         <div class="mainStats wow zoomIn animated">
@@ -60,7 +56,7 @@
         <div class="calStats wow zoomIn animated" data-wow-delay="3s">
           <div class="radial2" ang:round:progress data-round-progress-model="calories"></div>
         </div>
-        <div class="distStats">
+        <div class="distStats wow zoomIn animated">
           <div class="radial3" ang:round:progress data-round-progress-model="dist"></div>
         </div>
         <div class="info">
