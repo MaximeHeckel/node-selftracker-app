@@ -30,7 +30,7 @@ a:hover{
   margin: 0 auto;
   color: #79A5FF;
   padding-top: 40px;
-  font-size: 13px;
+  font-size: 15px;
   font-family: 'Abel'
 }
 
@@ -84,7 +84,7 @@ a:hover{
   top: 50%;
   height: 200px;
   width: 200px;
-  margin: 8% 0px 0px -100px;
+  margin: 12% 0px 0px -100px;
   position: absolute;
   text-align: center;
   z-index: 1;
