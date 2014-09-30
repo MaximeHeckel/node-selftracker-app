@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="libs/odometer/themes/odometer-theme-minimal.css">
 
     <!--JS-->
@@ -36,7 +36,7 @@
     <div class="container">
       <div class="logo wow fadeIn animated">
         <div class="col-lg-8 col-lg-offset-2 centered">
-          Maxime's personal tracker
+          <p class="title">Maxime's personal tracker</p>
           <hr>
           <p class="subtitle">Inspired by <a href="http://aprilzero.com/">APRILZERO</a>, Powered with Runkeeper and Fitbit</p>
           <div class="min-counter">
@@ -45,9 +45,6 @@
           </div>
         </div>
       </div>
-      <!--<div class="stats" ng-controller="mainController">
-        Activity minutes : {{lastactivity.activitymin}} min<br>
-      </div>-->
       <div class="row" ng-controller="mainController">
         <div class="mainStats wow zoomIn animated">
           <div class="radial1" ang:round:progress data-round-progress-model="steps"></div>

@@ -83,6 +83,12 @@ function mapController($scope, positionService){
           });
 }
 
-function detailController($scope){
-  $scope.message = "hello";
+function detailController($scope, $http){
+  $http.get('/api/activities')
+    .success(function(data){
+      $scope.activities = data;
+    })
+    .error(function(data){
+      console.log('Error: ' + data);
+    });
 }

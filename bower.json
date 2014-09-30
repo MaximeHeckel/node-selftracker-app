@@ -4,12 +4,10 @@
   "dependencies": {
     "bootstrap": "latest",
     "font-awesome": "latest",
-    "animate.css": "latest",
     "angular": "latest",
     "angular-route": "latest",
     "angular-leaflet-directive": "latest",
     "leaflet": "latest",
-    "chartjs": "latest",
     "wow": "~1.0.1",
     "angular-moment": "~0.8.2",
     "angular-odometer-js": "~0.1.1",
