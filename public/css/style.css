@@ -73,6 +73,7 @@ li{
 
 .history{
   padding-left: 0;
+  padding-right: 0;
 }
 
 ul.history-list{
@@ -81,7 +82,17 @@ ul.history-list{
 }
 
 ul.history-list > li{
-  height: 100px;
+  height: 150px;
+  background-color: #ffffff
+}
+
+.history-item{
+  font-family: "Open Sans", sans-serif;
+  color: #9EACBF;
+}
+
+.content{
+  padding-left: 20px;
 }
 
 .min-counter{

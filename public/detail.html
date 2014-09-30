@@ -72,8 +72,13 @@
             <p>History</p>
           </div>
           <ul class="history-list">
-            <li ng-repeat="activity in activities">
-              {{activity.steps}}
+            <li class="history-item" ng-repeat="activity in activities.slice().reverse()" ng-show="!$first">
+              <div class="content">
+                {{activity.date | date: 'MMMM dd yyyy '}}<br>
+                {{activity.steps}} steps
+                {{activity.distance}} km
+                {{activity.activitymin}} active minutes
+              </div>
             </li>
           </ul>
         </div>
