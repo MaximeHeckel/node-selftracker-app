@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Maxime's Personal Tracker</title>
+
+    <!--CSS-->
+    <link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="libs/odometer/themes/odometer-theme-minimal.css">
+
+    <!--JS-->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/leaflet/dist/leaflet.js"></script>
+    <script src="libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    <script src="libs/moment/moment.js"></script>
+    <script src="libs/angular-moment/angular-moment.min.js"></script>
+    <script src="libs/wow/dist/wow.min.js"></script>
+    <script src="libs/odometer/odometer.js"></script>
+    <script src="libs/angular-odometer-js/dist/angular-odometer.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+
+    <!--Custom angular files-->
+    <script src="js/angular-round-progress-directive.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body ng-app="selftracking" ng-controller="mainController">
+      <div id="static">
+            <div class="col-lg-8 col-lg-offset-2">
+              {{lastactivity.steps}}
+            </div>
+      </div>
+      <div id="scrolling" ng-controller="detailController">
+        {{message}}
+      </div>
+  </body>
+</html>

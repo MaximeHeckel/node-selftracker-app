@@ -41,7 +41,7 @@ function mainController($scope, $http){
         };
       $scope.dist = {
           label: $scope.lastactivity.distance + " / 8.00 km today",
-          percentage: $scope.lastactivity.steps/8000
+          percentage: $scope.lastactivity.distance/8
         };
     })
     .error(function(data){
@@ -81,4 +81,8 @@ function mapController($scope, positionService){
                   }
                 }
           });
+}
+
+function detailController($scope){
+  $scope.message = "hello";
 }

@@ -1,9 +1,22 @@
-html{
-    height: 800px;
-}
-
 body{
   background-color:#0D1218;
+}
+
+#static{
+  left: 0;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  color: #ffffff;
+}
+
+#scrolling{
+  right: 0;
+  left: auto;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  background-color: #ffffff;
 }
 
 a:hover{
