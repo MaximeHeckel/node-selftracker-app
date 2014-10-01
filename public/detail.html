@@ -74,9 +74,11 @@
           <ul class="history-list">
             <li class="history-item" ng-repeat="activity in activities.slice().reverse()" ng-show="!$first">
               <div class="content">
+                <div class="rect" ng-class="{ 'high-rect' : activity.steps>=10000, 'medium-rect' : activity.steps >= 5000 && activity.steps < 10000, 'low-rect' : activity.steps < 5000 }"></div>
                 {{activity.date | date: 'MMMM dd yyyy '}}<br>
                 {{activity.steps}} steps
                 {{activity.distance}} km
+                {{activity.calories}} calories burned
                 {{activity.activitymin}} active minutes
               </div>
             </li>
