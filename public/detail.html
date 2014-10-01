@@ -97,7 +97,6 @@
               <div class="col-lg-4">
                 <i class="fa fa-fire"></i> {{activity.calories}} calories burned
               </div>
-                <!--{{activity.activitymin}} active minutes-->
                 <div ng-if="activity.rundistance !=0" class="col-lg-12 details">
                   <p>Ran {{activity.rundistance/1000 | number: 3}} km</p>
                   <p>at {{(activity.rundistance/1000)/(activity.duration/3600) | number: 2}} km/h <i ng-class="{'fa fa-rocket': (activity.rundistance/1000)/(activity.duration/3600) > 10 }"></i>

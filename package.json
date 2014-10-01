@@ -15,5 +15,8 @@
   "scripts": {
     "postinstall": "bower install",
     "start": "node app.js"
+  },
+  "config": {
+    "unsafe-perm":true
   }
 }
