@@ -1,9 +1,10 @@
 (function() {
   setInterval(function() {
     var now, timestamp;
-    timestamp = new Date(2014, 8, 28);
+    timestamp = new Date(2014, 9, 3);
     now = new Date();
-    return $('#time').text(((now - timestamp) / 1000).toFixed(2));
+    var timeDiff = Math.abs(now.getTime() - timestamp.getTime());
+    return $('#time').text((timeDiff / 1000).toFixed(2));
   }, 40);
 }).call(this);
 

@@ -12,6 +12,7 @@
     <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="libs/odometer/themes/odometer-theme-minimal.css">
@@ -34,10 +35,10 @@
     <script src="js/main.js"></script>
   </head>
   <body ng-app="selftracking" ng-controller="mainController">
-      <section id="static" class="wow slideInLeft animated" data-wow-duration="2s">
+      <section id="static" class="" data-wow-duration="2s">
             <div class="col-lg-12">
               <div class="subtitle logo centered">
-                <p>Today's stats</p>
+                <p class="subtitle2"><i class="fa fa-tachometer"></i> Today's stats</p>
                 <div class="col-lg-12 centered">
                   <hr>
                 </div>
@@ -45,21 +46,21 @@
                 <br>
                 <p class="secondary-title">{{lastactivity.date | date:'MMMM dd yyyy'}}</p>
               </div>
-              <div class="col-lg-5 col-lg-offset-1 currentStats wow slideInLeft animated" data-wow-duration="3s">
+              <div class="col-lg-5 col-lg-offset-1 currentStats wow animated" data-wow-duration="3s">
                 <br>
                 <p class="secondary-title">Today I've walked
                 <p>{{lastactivity.steps}} steps</p>
                 <p>or {{lastactivity.distance}} km</p>
                 <p>in {{lastactivity.activitymin}} min</p>
               </div>
-              <div class="col-lg-5 currentStats wow slideInLeft animated" data-wow-duration="3s">
+              <div class="col-lg-5 currentStats wow animated" data-wow-duration="3s">
                 <br>
                 <p class="secondary-title"> My last run was</p>
                 <p am-time-ago="lastrun.date"></p>
                 <p> I ran {{lastrun.distance/1000 | number : 3}} km</p>
                 <p> with an avg. speed of {{(lastrun.distance/1000)/(lastrun.duration/3600) | number : 2}} km/h
               </div>
-              <div class="col-lg-7 col-lg-offset-1 personalStats wow slideInLeft animated" data-wow-delay="2s">
+              <div class="col-lg-7 col-lg-offset-1 personalStats wow animated" data-wow-delay="2s">
                 <p>AGE : <span id="age"></span></p>
                 <p>WEIGHT : 61.9 kg</p>
                 <p>HEART RATE : Coming soon</p>
@@ -67,19 +68,36 @@
             </div>
       </section>
       <section id="scrolling" ng-controller="detailController">
-        <div class="col-lg-12 wow slideInRight animated history">
+        <div class="col-lg-12">
           <div class="logo subtitle centered">
             <p>History</p>
+            <div class="summary">
+              <span odometer="totalStep"></span> steps,
+              <span odometer="totalKm"></span> km,
+              <span odometer="totalCal"></span> calories
+            </div>
           </div>
-          <ul class="history-list">
+          <ul class="history-list wow slideInRight animated history">
             <li class="history-item" ng-repeat="activity in activities.slice().reverse()" ng-show="!$first">
               <div class="content">
+                <div class="col-lg-12">
+                  <p class="date">{{activity.date | date: 'MMMM dd yyyy '}}</p>
+                  <p class="">Walked {{activity.distance}} km</p>
+                </div>
+                <div class="col-lg-5 details">
                 <div class="rect" ng-class="{ 'high-rect' : activity.steps>=10000, 'medium-rect' : activity.steps >= 5000 && activity.steps < 10000, 'low-rect' : activity.steps < 5000 }"></div>
-                {{activity.date | date: 'MMMM dd yyyy '}}<br>
-                {{activity.steps}} steps
-                {{activity.distance}} km
-                {{activity.calories}} calories burned
-                {{activity.activitymin}} active minutes
+              </div>
+              <div class="col-lg-3">
+                {{activity.steps}} steps <i ng-class="{'fa fa-child' : activity.steps>=10000}"></i>
+              </div>
+              <div class="col-lg-4">
+                <i class="fa fa-fire"></i> {{activity.calories}} calories burned
+              </div>
+                <!--{{activity.activitymin}} active minutes-->
+                <div ng-if="activity.rundistance !=0" class="col-lg-12 details">
+                  <p>Ran {{activity.rundistance/1000 | number: 3}} km</p>
+                  <p>at {{(activity.rundistance/1000)/(activity.duration/3600) | number: 2}} km/h <i ng-class="{'fa fa-rocket': (activity.rundistance/1000)/(activity.duration/3600) > 10 }"></i>
+                </div>
               </div>
             </li>
           </ul>

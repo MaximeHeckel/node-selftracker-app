@@ -83,10 +83,24 @@ function mapController($scope, positionService){
           });
 }
 
-function detailController($scope, $http){
+function detailController($scope, $http, summaryService){
+  summaryService.getSum(function(total){
+    $scope.total = total;
+  });
   $http.get('/api/activities')
     .success(function(data){
       $scope.activities = data;
+      var sumStep = 0;
+      var sumKm = 0;
+      var sumCal = 0;
+      for( i = 0; i < data.length; i++){
+        sumStep += data[i].steps;
+        sumKm += data[i].distance;
+        sumCal += data[i].calories;
+        $scope.totalStep = sumStep;
+        $scope.totalKm = sumKm;
+        $scope.totalCal = sumCal;
+      }
     })
     .error(function(data){
       console.log('Error: ' + data);
