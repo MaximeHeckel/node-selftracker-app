@@ -13,10 +13,7 @@
     "supervisor": "latest"
   },
   "scripts": {
-    "postinstall": "bower install --allow-root",
+    "postinstall": "bower install",
     "start": "node app.js"
-  },
-  "config": {
-    "unsafe-perm":true
   }
 }
