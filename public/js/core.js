@@ -83,10 +83,7 @@ function mapController($scope, positionService){
           });
 }
 
-function detailController($scope, $http, summaryService){
-  summaryService.getSum(function(total){
-    $scope.total = total;
-  });
+function detailController($scope, $http){
   $http.get('/api/activities')
     .success(function(data){
       $scope.activities = data;

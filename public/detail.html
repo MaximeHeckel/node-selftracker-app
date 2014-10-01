@@ -36,6 +36,9 @@
   </head>
   <body ng-app="selftracking" ng-controller="mainController">
       <section id="static" class="" data-wow-duration="2s">
+            <div class="backbtn">
+              <a href="/"><i class="fa fa-chevron-left"></i></a>
+            </div>
             <div class="col-lg-12">
               <div class="subtitle logo centered">
                 <p class="subtitle2"><i class="fa fa-tachometer"></i> Today's stats</p>
@@ -46,19 +49,20 @@
                 <br>
                 <p class="secondary-title">{{lastactivity.date | date:'MMMM dd yyyy'}}</p>
               </div>
-              <div class="col-lg-5 col-lg-offset-1 currentStats wow animated" data-wow-duration="3s">
-                <br>
-                <p class="secondary-title">Today I've walked
-                <p>{{lastactivity.steps}} steps</p>
-                <p>or {{lastactivity.distance}} km</p>
-                <p>in {{lastactivity.activitymin}} min</p>
-              </div>
-              <div class="col-lg-5 currentStats wow animated" data-wow-duration="3s">
-                <br>
-                <p class="secondary-title"> My last run was</p>
-                <p am-time-ago="lastrun.date"></p>
-                <p> I ran {{lastrun.distance/1000 | number : 3}} km</p>
-                <p> with an avg. speed of {{(lastrun.distance/1000)/(lastrun.duration/3600) | number : 2}} km/h
+              <br>
+              <div class="col-lg-10 col-lg-offset-1 currentStats wow fadeIn animated" data-wow-duration="6s">
+                <div class="col-lg-4">
+                  <p class="secondary-title">Today I've walked
+                  <p>{{lastactivity.steps}} steps</p>
+                  <p>or {{lastactivity.distance}} km</p>
+                  <p>in {{lastactivity.activitymin}} min</p>
+                </div>
+                <div class="col-lg-7">
+                  <p class="secondary-title"> My last run was</p>
+                  <p am-time-ago="lastrun.date"></p>
+                  <p> I ran {{lastrun.distance/1000 | number : 3}} km</p>
+                  <p>in {{lastrun.duration/60 | number : 1}} min</p>
+                </div>
               </div>
               <div class="col-lg-7 col-lg-offset-1 personalStats wow animated" data-wow-delay="2s">
                 <p>AGE : <span id="age"></span></p>
@@ -69,9 +73,9 @@
       </section>
       <section id="scrolling" ng-controller="detailController">
         <div class="col-lg-12">
-          <div class="logo subtitle centered">
+          <div class="logo subtitle2 centered">
             <p>History</p>
-            <div class="summary">
+            <div class="summary subtitle">
               <span odometer="totalStep"></span> steps,
               <span odometer="totalKm"></span> km,
               <span odometer="totalCal"></span> calories
