@@ -13,6 +13,7 @@
     "angular-odometer-js": "~0.1.1",
     "odometer": "~0.4.7",
     "angular-round-progress-directive": "*",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "ng-chartjs": "~0.0.5"
   }
 }
