@@ -1,4 +1,4 @@
-var selftracking = angular.module('selftracking',["leaflet-directive","angularMoment","ui.odometer","angular.directives-round-progress"])
+var selftracking = angular.module('selftracking',["leaflet-directive","angularMoment","ui.odometer","angular.directives-round-progress", "chartjs"])
 
   selftracking.service('positionService', function($http){
     var lastrunpos = [];
@@ -102,4 +102,58 @@ function detailController($scope, $http){
     .error(function(data){
       console.log('Error: ' + data);
     });
+}
+
+selftracking.service('graphService', function($http){
+  var stepsList = [];
+  var runList =[];
+  var datesList = [];
+  $http.get('/api/activities')
+    .success(function(data){
+      angular.forEach(data, function (value) {
+       stepsList.push(value.steps);
+       runList.push(value.rundistance);
+       var d = new Date(value.date);
+       console.log(d);
+       var d2 = d.getDay();
+       console.log(d2);
+       datesList.push(d2);
+     });
+   })
+    .error(function(data){
+      console.log('Error: '+ data);
+    });
+   return {
+    getStepsList : function() {
+      return stepsList;
+    },
+    getRunList : function() {
+      return runList;
+    },
+    getDatesList : function() {
+      return datesList;
+    }
+   }
+});
+
+function graphController($scope, graphService){
+  $scope.someData = {
+      labels: graphService.getDatesList(),
+      datasets: [
+        {
+          label: 'Steps',
+          data: graphService.getStepsList(),
+          fillColor: '#8AAEFF'
+        },
+        {
+          label: 'Run',
+          data: graphService.getRunList(),
+          fillColor: '#E12C50'
+        }
+      ]
+    };
+
+    $scope.someOptions = {
+        segmentStrokeColor: '#ffffff'
+    }
 }

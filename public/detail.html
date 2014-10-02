@@ -20,6 +20,8 @@
     <!--JS-->
     <script src="libs/angular/angular.min.js"></script>
     <script src="libs/leaflet/dist/leaflet.js"></script>
+    <script src="libs/Chart.js/Chart.js"></script>
+    <script src="libs/ng-chartjs/dist/angular-chartjs.js"></script>
     <script src="libs/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
     <script src="libs/moment/moment.js"></script>
     <script src="libs/angular-moment/angular-moment.min.js"></script>
@@ -68,6 +70,9 @@
                 <p>AGE : <span id="age"></span></p>
                 <p>WEIGHT : 61.9 kg</p>
                 <p>HEART RATE : Coming soon</p>
+              </div>
+              <div ng-controller="graphController">
+                <cjs-bar dataset="someData" options="someOptions" segement-stroke-width="5" responsive="true" width="600px" height="200px"></cjs-bar>
               </div>
             </div>
       </section>
