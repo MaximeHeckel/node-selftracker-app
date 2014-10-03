@@ -417,6 +417,75 @@ a.detailBtn{
   -moz-animation-timing-function: linear;
 }
 
+.six{
+  background-image:url("../img/6.png");
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: -237px 0px 0px -387px;
+  z-index: 3;
+  animation-name: rotateEndlessly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.six2{
+  background-image:url("../img/6.png");
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  right: 0;
+  top:50%;
+  margin: -187px -145px 0px 0px;
+  z-index: 3;
+  animation-name: rotateEndlessly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
+.six3{
+  background-image:url("../img/6.png");
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: 12px 0px 0px -387px;
+  z-index: 3;
+  animation-name: rotateEndlessly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateEndlessly;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateEndlessly;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+
 .background-circle{
   height: 400px;
   width: 400px;
