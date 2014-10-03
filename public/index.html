@@ -44,19 +44,6 @@
         </div>
       </div>
       <div class="row" ng-controller="mainController">
-        <div class="info">
-            <div class="runcard">
-              <p class="run-info">
-                <p>Last run: </p>
-                <span odometer="lastrun.distance/1000 | number: 3" odometer-options="{duration:4000}"></span> KM IN <span odometer="lastrun.duration/60 | number: 1" odometer-options="{duration: 5000}"></span> MIN
-                </p>
-              <p>
-                <span odometer="lastrun.calories"></span> CALORIES BURNED</p>
-              <p>
-                <span am-time-ago="lastrun.date"></span>
-              </p>
-            </div>
-        </div>
         <div class="col-lg-8 col-lg-offset-2 centered">
         <div class="map wow zoomIn animated" ng-controller="mapController">
           <div class="circles">
@@ -68,6 +55,19 @@
             </div>
             <div class="distStats wow zoomIn animated">
               <div class="radial3" ang:round:progress data-round-progress-model="dist"></div>
+            </div>
+            <div class="info">
+              <p class="run-info">
+                Last run :
+                <br>
+                <br>
+                <span odometer="lastrun.distance/1000 | number: 3" odometer-options="{duration:4000}"></span> KM IN <span odometer="lastrun.duration/60 | number: 1" odometer-options="{duration: 5000}"></span> MIN<br>
+                <span odometer="lastrun.calories"></span> CALORIES BURNED<br>
+                <span am-time-ago="lastrun.date"></span>
+            </p>
+            </div>
+            <div class="detailBtn">
+              <a href="/detail">Details</a>
             </div>
             <div class="one"></div>
             <div class="back"></div>

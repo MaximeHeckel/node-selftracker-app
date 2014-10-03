@@ -195,17 +195,6 @@ ul.history-list > li{
   background-color: #E12C50;
 }
 
-.detailBtn{
-  width: 50%;
-  margin: 0 auto;
-  color: #79A5FF;
-  padding-bottom: 40px;
-  font-size: 14px;
-  font-weight: 700;
-  z-index: 10;
-  font-family: 'Open Sans', sans-serif;
-}
-
 .mainStats{
   position:absolute;
   z-index: 3;
@@ -227,33 +216,39 @@ ul.history-list > li{
   margin-top: 250px;
 }
 
-.runcard{
-  color : #ffffff;
-}
-
 .info{
-  opacity: 1;
   left:50%;
   top: 50%;
-  height: 200px;
-  width: 200px;
-  margin: 12% 0px 0px -100px;
+  height: 85px;
+  width: 170px;
+  margin: -200px 0 0 -85px;
   position: absolute;
   text-align: center;
   z-index: 1;
-  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+}
+
+.detailBtn{
+  left:50%;
+  top: 50%;
+  height: 40px;
+  width: 110px;
+  margin: 150px 0 0 -55px;
+  position: absolute;
+  text-align: center;
+  z-index: 5;
   font-weight: 400;
-  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
 }
 
-@media screen and (min-width: 1400px){
-  .info{
-    margin: 0px 0px 0px -100px;
-  }
-}
-
-.run-info:{
-    font-weight: 300;
+.run-info{
+    opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 20px;
 }
 
 .odometer{
