@@ -26,8 +26,14 @@ a:hover{
   text-decoration:none;
 }
 
+.logo-pos{
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
 .logo{
-  color: #fafafa;
+  color: #ffffff;
   padding-top : 40px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -95,6 +101,17 @@ li{
   padding-top: 25px;
 }
 
+@media screen and (max-width: 900px){
+  .graph{
+    display:none;
+  }
+}
+
+.graph-subtitle{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .run{
   color: #E12C50;
 }
@@ -119,7 +136,13 @@ ul.history-list{
 
 ul.history-list > li{
   height: 175px;
-  background-color: #ffffff
+  background-color: #ffffff;
+}
+
+@media screen and (max-width:1200px){
+  ul.history-list > li{
+    height: 225px;
+  }
 }
 
 .history-item{

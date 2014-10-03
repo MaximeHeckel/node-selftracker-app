@@ -43,34 +43,28 @@
             </div>
             <div class="col-lg-12">
               <div class="subtitle logo centered">
-                <p class="subtitle2"><i class="fa fa-tachometer"></i> Today's stats</p>
-                <div class="col-lg-12 centered">
+                <p class="subtitle2">Today's stats : {{lastactivity.date | date:'MMMM dd yyyy'}}</p>
                   <hr>
-                </div>
-                <br>
-                <br>
-                <p class="secondary-title">{{lastactivity.date | date:'MMMM dd yyyy'}}</p>
               </div>
-              <br>
-              <div class="col-lg-10 col-lg-offset-1 currentStats" data-wow-duration="6s">
-                <div class="col-lg-4">
+              <div class="col-lg-10 col-md-12 col-sm-12 col-lg-offset-1 currentStats" data-wow-duration="6s">
+                <div class="col-lg-5 col-md-6 col-sm-6">
                   <p class="secondary-title">Today I've walked
                   <p>{{lastactivity.steps}} steps</p>
                   <p>or {{lastactivity.distance}} km</p>
                   <p>in {{lastactivity.activitymin}} min</p>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-md-4 col-sm-4">
                   <p class="secondary-title"> My last run was</p>
                   <p am-time-ago="lastrun.date"></p>
                   <p> I ran {{lastrun.distance/1000 | number : 3}} km</p>
                   <p>in {{lastrun.duration/60 | number : 1}} min</p>
                 </div>
               </div>
-              <!--<div class="col-lg-7 col-lg-offset-1 personalStats wow animated" data-wow-delay="2s">
+              <div class="col-lg-10 col-md-12 col-sm-12 col-lg-offset-1 personalStats wow animated" data-wow-delay="2s">
                 <p>AGE : <span id="age"></span></p>
                 <p>WEIGHT : 61.9 kg</p>
                 <p>HEART RATE : Coming soon</p>
-              </div>-->
+              </div>
               <div class="col-lg-12 graph" ng-controller="graphController">
                 <p class="subtitle graph-subtitle">Last 15 days <span class="walk" >walk</span> and<span class="run"> run distance</span> in km</p>
                 <cjs-bar dataset="someData" options="someOptions" segement-stroke-width="5" responsive="true" width="700px" height="250px"></cjs-bar>
