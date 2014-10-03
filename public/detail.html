@@ -41,10 +41,9 @@
             <div class="backbtn">
               <a href="/"><i class="fa fa-chevron-left"></i></a>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-10 col-lg-offset-1">
               <div class="subtitle logo centered">
-                <p class="subtitle2">Today's stats : {{lastactivity.date | date:'MMMM dd yyyy'}}</p>
-                  <hr>
+                <p class="subtitle2">Today's stats : {{lastactivity.date | date:'MMMM dd yyyy'}}<hr></p>
               </div>
               <div class="col-lg-10 col-md-12 col-sm-12 col-lg-offset-1 currentStats" data-wow-duration="6s">
                 <div class="col-lg-5 col-md-6 col-sm-6">
@@ -66,7 +65,7 @@
                 <p>HEART RATE : Coming soon</p>
               </div>
               <div class="col-lg-12 graph" ng-controller="graphController">
-                <p class="subtitle graph-subtitle">Last 15 days <span class="walk" >walk</span> and<span class="run"> run distance</span> in km</p>
+                <p class="subtitle graph-subtitle">Last 15 days <span class="walk" >walk</span> and<span class="run"> run </span>distance in km:</p>
                 <cjs-bar dataset="someData" options="someOptions" segement-stroke-width="5" responsive="true" width="700px" height="250px"></cjs-bar>
               </div>
             </div>
@@ -86,19 +85,19 @@
               <div class="content">
                 <div class="col-lg-12">
                   <p class="date">{{activity.date | date: 'MMMM dd yyyy '}}</p>
-                  <p class="">Walked {{activity.distance}} km</p>
+                  <p class="walk">Walked {{activity.distance}} km</p>
                 </div>
                 <div class="col-lg-5 details">
                 <div class="rect" ng-class="{ 'high-rect' : activity.steps>=10000, 'medium-rect' : activity.steps >= 5000 && activity.steps < 10000, 'low-rect' : activity.steps < 5000 }"></div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 resp-padding">
                 {{activity.steps}} steps <i ng-class="{'fa fa-child' : activity.steps>=10000}"></i>
               </div>
-              <div class="col-lg-4">
-                <i class="fa fa-fire"></i> {{activity.calories}} calories burned
+              <div class="col-lg-4 resp-padding">
+               {{activity.calories}} calories burned <i class="fa fa-fire"></i>
               </div>
                 <div ng-if="activity.rundistance !=0" class="col-lg-12 details">
-                  <p>Ran {{activity.rundistance/1000 | number: 3}} km</p>
+                  <p class="run">Ran {{activity.rundistance/1000 | number: 3}} km</p>
                   <p>at {{(activity.rundistance/1000)/(activity.duration/3600) | number: 2}} km/h <i ng-class="{'fa fa-rocket': (activity.rundistance/1000)/(activity.duration/3600) > 10 }"></i>
                 </div>
               </div>

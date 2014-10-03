@@ -20,7 +20,7 @@ angular.module('angular.directives-round-progress', []).directive('angRoundProgr
       node.parentNode.replaceChild(canvas, node);
 
       var outerCircleWidth = node.getAttribute('data-round-progress-outer-circle-width') || '5';
-      var innerCircleWidth = node.getAttribute('data-round-progress-inner-circle-width') || '55';
+      var innerCircleWidth = node.getAttribute('data-round-progress-inner-circle-width') || '85';
 
       var outerCircleBackgroundColor = node.getAttribute('data-round-progress-outer-circle-background-color') || '#8C8C8D';
       var outerCircleForegroundColor = node.getAttribute('data-round-progress-outer-circle-foreground-color') || '#E12C50';

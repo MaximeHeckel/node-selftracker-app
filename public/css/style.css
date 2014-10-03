@@ -92,7 +92,7 @@ li{
   font-size: 14px;
   font-weight: 400;
   padding-top: 40px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
 .graph{
@@ -141,6 +141,9 @@ ul.history-list > li{
   ul.history-list > li{
     height: 225px;
   }
+  .resp-padding{
+    padding-top: 10px;
+  }
 }
 
 .history-item{
@@ -187,12 +190,12 @@ ul.history-list > li{
 
 .medium-rect{
   width: 175px;
-  background-color: #E12C50;
+  background-color: #9EACBF;
 }
 
 .low-rect{
   width: 90px;
-  background-color: #E12C50;
+  background-color: #9EACBF;
 }
 
 .mainStats{
@@ -231,8 +234,12 @@ ul.history-list > li{
 .detailBtn{
   left:50%;
   top: 50%;
-  height: 40px;
+  height: 25px;
   width: 110px;
+  vertical-align: center;
+  background-color:#8AAEFF;
+  border-radius: 4px;
+  padding-top: 4px;
   margin: 150px 0 0 -55px;
   position: absolute;
   text-align: center;
@@ -241,6 +248,16 @@ ul.history-list > li{
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #ffffff;
+  transition: background-color 0.5s ease;
+}
+
+.detailBtn:hover{
+  background-color: #0C1217;
+}
+
+a.detailBtn{
+  color: white;
+  font-size: 12px;
 }
 
 .run-info{
