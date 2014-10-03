@@ -110,15 +110,16 @@ selftracking.service('graphService', function($http){
   var datesList = [];
   $http.get('/api/activities')
     .success(function(data){
-      angular.forEach(data, function (value) {
-       stepsList.push(value.steps);
-       runList.push(value.rundistance);
-       var d = new Date(value.date);
-       console.log(d);
-       var d2 = d.getDay();
-       console.log(d2);
+      for(var i = data.length-1; i> data.length - 15; i--) {
+       stepsList.push(data[i].distance);
+       runList.push((data[i].rundistance/1000).toFixed(2));
+       var d = new Date(data[i].date);
+       var d2 = d.getDate();
        datesList.push(d2);
-     });
+     };
+     stepsList = stepsList.reverse();
+     runList = runList.reverse();
+     datesList = datesList.reverse();
    })
     .error(function(data){
       console.log('Error: '+ data);
@@ -154,6 +155,5 @@ function graphController($scope, graphService){
     };
 
     $scope.someOptions = {
-        segmentStrokeColor: '#ffffff'
     }
 }
