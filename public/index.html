@@ -41,23 +41,9 @@
           <p class="title">Maxime's personal tracker</p>
           <hr>
           <p class="subtitle">Inspired by <a href="http://aprilzero.com/">APRILZERO</a>, Powered with Runkeeper and Fitbit</p>
-          <div class="detailBtn">
-            <a href="/detail">Details</a>
-            <!--Seconds tracked:
-            <span id="time"></span>-->
-          </div>
         </div>
       </div>
       <div class="row" ng-controller="mainController">
-        <div class="mainStats wow zoomIn animated">
-          <div class="radial1" ang:round:progress data-round-progress-model="steps"></div>
-        </div>
-        <div class="calStats wow zoomIn animated" data-wow-delay="3s">
-          <div class="radial2" ang:round:progress data-round-progress-model="calories"></div>
-        </div>
-        <div class="distStats wow zoomIn animated">
-          <div class="radial3" ang:round:progress data-round-progress-model="dist"></div>
-        </div>
         <div class="info">
             <div class="runcard">
               <p class="run-info">
@@ -74,6 +60,15 @@
         <div class="col-lg-8 col-lg-offset-2 centered">
         <div class="map wow zoomIn animated" ng-controller="mapController">
           <div class="circles">
+            <div class="mainStats wow zoomIn animated">
+              <div class="radial1" ang:round:progress data-round-progress-model="steps"></div>
+            </div>
+            <div class="calStats wow zoomIn animated" data-wow-delay="3s">
+              <div class="radial2" ang:round:progress data-round-progress-model="calories"></div>
+            </div>
+            <div class="distStats wow zoomIn animated">
+              <div class="radial3" ang:round:progress data-round-progress-model="dist"></div>
+            </div>
             <div class="one"></div>
             <div class="back"></div>
             <div class="two"></div>

@@ -26,14 +26,12 @@ a:hover{
   text-decoration:none;
 }
 
-.logo-pos{
-  position: absolute;
-  top: 0;
-  left: 20px;
+.centered{
+  text-align: center;
 }
 
 .logo{
-  color: #ffffff;
+  color: #fafafa;
   padding-top : 40px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -210,42 +208,23 @@ ul.history-list > li{
 
 .mainStats{
   position:absolute;
-  z-index: 2;
-  margin-top: 150px;
-  margin-left: 40px;
-  left: 0
+  z-index: 3;
+  margin-left: -150px;
 }
 
 .calStats{
   position: absolute;
-  z-index: 2;
-  margin-top: 400px;
-  margin-left: 40px;
-  left: 0
+  z-index: 3;
+  right: 0;
+  margin-right: -160px;
+  margin-top: 50px;
 }
 
 .distStats{
   position: absolute;
-  z-index: 2;
-  margin-top: 150px;
-  margin-right:40px;
-  right: 0;
-}
-
-@media screen and (max-width:1200px){
-  .mainStats{
-    margin-top: 50px;
-    margin-left: 0;
-  }
-
-  .calStats{
-    margin-top: 300px;
-    margin-left: 0;
-  }
-}
-
-.centered{
-  text-align: center;
+  z-index: 3;
+  margin-left: -150px;
+  margin-top: 250px;
 }
 
 .runcard{
@@ -286,8 +265,9 @@ ul.history-list > li{
 }
 
 .map{
-  padding-top: 25px;
+  padding-top: 50px;
   padding-bottom: 150px;
+  z-index: 0;
 }
 
 .circles{
